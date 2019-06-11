@@ -1,0 +1,19 @@
+<h1 align="center">
+    Edit <%=@name%>'s intro 
+</h1>
+<h3 align="center">
+    use "intro/name" to navigate to desired page
+</h3>
+<div>
+    <form method="post" action="/intro/<%=@name%>/edit">
+    <fieldset>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%=@name%>">
+        <label for="intro">Intro:</label>
+        <input type="text" name="intro" id="name" value="<%=@content%>">
+        <input type="submit">
+    </fieldset>
+    </form>
+</div>
+
+<a href ="/">Back to Home</a>
