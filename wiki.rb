@@ -5,7 +5,7 @@ require "uri"
 def page_content(title)
     File.read("pages/#{title}.txt")
 rescue Errno::ENOENT 
-    return "no page with that name" 
+    return nil 
 end
 
 def save_file(title, content)

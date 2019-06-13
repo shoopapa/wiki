@@ -2,6 +2,7 @@
     <%= @name.capitalize %>'s Minecraft intro
 </h1>
 
+<% if !@content.nil? %>
 <h2 align="center">
 <%=
     @content
@@ -9,3 +10,11 @@
 </h2>
 
 <a href="<%=@name%>/edit">edit page</a>
+<% else %>
+    <h2 align="center">
+        No intro with that name
+    </h2>
+    <h3 align="center">
+        <a href="/intro/new">Create a new page</a>
+    </h3>
+<% end %>
